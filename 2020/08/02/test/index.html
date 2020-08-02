@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Few-shot Learning 概述, Notplus">
+    <meta name="keywords" content="test, Notplus">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Few-shot Learning 概述 | Notplus</title>
+    <title>test | Notplus</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Few-shot Learning 概述</h1>
+                    <h1 class="description center-align post-title">test</h1>
                 </div>
             </div>
         </div>
@@ -429,29 +429,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Deep-Learning/">
-                                <span class="chip bg-color">Deep Learning</span>
-                            </a>
-                        
-                            <a href="/tags/Few-shot-Learning/">
-                                <span class="chip bg-color">Few-shot Learning</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Deep-Learing/" class="post-category">
-                                Deep Learing
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -460,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-07
+                    2020-08-02
                 </div>
                 
 
@@ -474,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    714
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -496,43 +479,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Few-shot-Learning-概述"><a href="#Few-shot-Learning-概述" class="headerlink" title="Few-shot Learning 概述"></a>Few-shot Learning 概述</h1><h2 id="What-is-few-shot-Learning"><a href="#What-is-few-shot-Learning" class="headerlink" title="What is few-shot Learning?"></a>What is few-shot Learning?</h2><p>Few-shot Learning 是 Meta Learning 在监督学习领域的应用。<br>Meta Learning，又称为learning to learn，在meta training阶段将数据集分解为不同的meta task，去学习类别变化的情况下模型的泛化能力，在meta testing阶段，面对全新的类别，不需要变动已有的模型，就可以完成分类。</p>
-<p>few-shot的训练集中包含了很多的类别，每个类别中有多个样本。<br>在训练阶段，会在训练集中随机抽取C个类别，每个类别K个样本（总共CK个数据），构建一个 meta-task，作为模型的支撑集（support set）输入；<br>再从这C个类中剩余的数据中抽取一批（batch）样本作为模型的预测对象（batch set）。<br>即要求模型从C*K个数据中学会如何区分这C个类别，这样的任务被称为C-way K-shot(C类，每个类K个样本)问题。<br>训练过程中，每次训练 (episode)都会采样得到不同meta-task。这种机制使得模型学会不同meta-task中的共性部分，比如如何提取重要特征及比较样本相似等，忘掉 meta-task中task相关部分，因此，在面对新的未见过的 meta-task时，也能较好地进行分类。[1]</p>
-<h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h3 id="Optimization-based"><a href="#Optimization-based" class="headerlink" title="Optimization based"></a>Optimization based</h3><ol>
-<li><p>MAML [2]<br>基本思路是通过学习模型的初始化参数使得其在一步或多步迭代下实现精度最大化。<br><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200210185652.png" alt="MAML">[3] </p>
-</li>
-<li><p>Reptile [4]<br>基本思路与MAML一致，一样是学习初始化参数，区别在于MAML训练时只一次迭代，取第二次迭代参数梯度更新；Reptile训练时多次迭代，参数向最后迭代方向作为更新方向。<br><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200210183327.png" alt="Reptile">[5] </p>
-</li>
-<li><p>Gradient Descent as LSTM [6]<br>通过LSTM，将梯度下降看作LSTM的一种特例，通过学习forget gate &amp; input gate 参数(正则化强度 &amp; 学习率)，以期得到一种比梯度下降更好的优化算法。<br><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200210185441.png" alt="Gradient Descent as LSTM">[7] </p>
-</li>
-</ol>
-<h3 id="Metric-based"><a href="#Metric-based" class="headerlink" title="Metric based"></a>Metric based</h3><ol>
-<li><p>Siamese neural networks [8]<br>输入两张图片,一张训练,一张为测试,通过CNN提取特征,再经过embedding,比较相似度,计算分数.</p>
-</li>
-<li><p>Prototypical Network [9]<br>寻找类别在高维空间的投影,以期通过聚类方式解决分类问题.<br><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200210192535.png" alt="Prototypical Network">[10]   </p>
-</li>
-<li><p>Relation Network [11]<br>relation network在计算相似度时通过一个cnn来学习计算.<br><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200210193006.png" alt="Relation Network">[11]   </p>
-</li>
-</ol>
-<h3 id="Model-based"><a href="#Model-based" class="headerlink" title="Model based"></a>Model based</h3><ol>
-<li>Memory-Augmented Neural Networks[12]<br><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200210194232.png" alt="Model based">[13]</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li>[1] <a target="_blank" rel="noopener" href="https://daiwk.github.io/posts/ml-few-shot-learning.html">few-shot learning</a></li>
-<li>[2] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1703.03400">Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</a></li>
-<li>[3] <a target="_blank" rel="noopener" href="https://youtu.be/vUwOA3SNb_E">Meta Learning – MAML (5/9)</a></li>
-<li>[4] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1803.02999">On First-Order Meta-Learning Algorithms</a></li>
-<li>[5] <a target="_blank" rel="noopener" href="https://youtu.be/9jJe2AD35P8">Meta Learning – MAML (9/9)</a></li>
-<li>[6] <a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=rJY0-Kcll">Optimization as a Model for Few-Shot Learning</a></li>
-<li>[7] <a target="_blank" rel="noopener" href="https://youtu.be/G_xYYq772NQ">Meta Learning - Gradient Descent as LSTM (2/3)</a></li>
-<li>[8] <a target="_blank" rel="noopener" href="https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf">Siamese neural networks for one-shot image recognition</a></li>
-<li>[9] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1703.05175">Prototypical networks for few-shot learning</a></li>
-<li>[10] <a target="_blank" rel="noopener" href="https://youtu.be/semSxPP2Yzg">Meta Learning – Metric-based (3/3)</a></li>
-<li>[11] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1711.06025">Learning to Compare: Relation Network for Few-Shot Learning</a></li>
-<li>[12] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1605.06065">One-shot Learning with Memory-Augmented Neural Networks</a></li>
-<li>[13] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/61037404">Meta-Learning(2)—Memory based方法</a></li>
-</ul>
-
+                
             </div>
             <hr/>
 
@@ -557,7 +504,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://notplus.cn/2020/03/07/few-shot-learning-gai-shu/">http://notplus.cn/2020/03/07/few-shot-learning-gai-shu/</a>
+                    <a href="http://notplus.cn/2020/08/02/test/">http://notplus.cn/2020/08/02/test/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -594,15 +541,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Deep-Learning/">
-                                    <span class="chip bg-color">Deep Learning</span>
-                                </a>
-                            
-                                <a href="/tags/Few-shot-Learning/">
-                                    <span class="chip bg-color">Few-shot Learning</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -768,9 +707,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/08/02/test/">
                     <div class="card-image">
@@ -788,9 +728,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -799,6 +739,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -809,32 +750,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/17/assignment-2-q5-pytorch.15/">
+                <a href="/2020/03/07/few-shot-learning-gai-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CS231 Assignment 2 Q5-PyTorch">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Few-shot Learning 概述">
                         
-                        <span class="card-title">CS231 Assignment 2 Q5-PyTorch</span>
+                        <span class="card-title">Few-shot Learning 概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment2
-Code1. 实现一个三层全连接神经网络实现思路: 通过PyTorch实现一个三
+                            Few-shot Learning 概述What is few-shot Learning?Few-shot Learning 是 Meta Learning 在监督学习领域的应用。Meta Learning，又称为learning to 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                            <a href="/categories/Deep-Learing/" class="post-category">
+                                    Deep Learing
                                 </a>
                             
                             
@@ -848,12 +788,8 @@ Code1. 实现一个三层全连接神经网络实现思路: 通过PyTorch实现�
                         <span class="chip bg-color">Deep Learning</span>
                     </a>
                     
-                    <a href="/tags/Assignment/">
-                        <span class="chip bg-color">Assignment</span>
-                    </a>
-                    
-                    <a href="/tags/CS231n/">
-                        <span class="chip bg-color">CS231n</span>
+                    <a href="/tags/Few-shot-Learning/">
+                        <span class="chip bg-color">Few-shot Learning</span>
                     </a>
                     
                 </div>
@@ -991,6 +927,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
