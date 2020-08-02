@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Notplus</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://notplus.cn/"/>
+  <updated>2020-01-21T05:32:48.288Z</updated>
+  <id>http://notplus.cn/</id>
+  
+  <author>
+    <name>notplus</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/xiang-liang-wei-ji-fen.8/"/>
+    <id>http://notplus.cn/2020/08/02/xiang-liang-wei-ji-fen.8/</id>
+    <published>2020-08-02T05:21:46.070Z</published>
+    <updated>2020-01-21T05:32:48.288Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;向量微积分-Vector-Calculus&quot;&gt;&lt;a href=&quot;#向量微积分-Vector-Calculus&quot; class=&quot;headerlink&quot; title=&quot;向量微积分(Vector Calculus)&quot;&gt;&lt;/a&gt;向量微积分(Vector
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-2-q5-pytorch.15/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-2-q5-pytorch.15/</id>
+    <published>2020-08-02T05:21:46.022Z</published>
+    <updated>2020-02-07T13:36:15.281Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-2-q4-convnet.14/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-2-q4-convnet.14/</id>
+    <published>2020-08-02T05:21:46.002Z</published>
+    <updated>2020-02-07T13:16:12.137Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-2-q3-dropout.13/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-2-q3-dropout.13/</id>
+    <published>2020-08-02T05:21:45.986Z</published>
+    <updated>2020-02-03T12:15:13.746Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-2-q2-batchnormalization.12/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-2-q2-batchnormalization.12/</id>
+    <published>2020-08-02T05:21:45.970Z</published>
+    <updated>2020-02-03T12:08:33.052Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-2-q1-fullyconnectednet.11/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-2-q1-fullyconnectednet.11/</id>
+    <published>2020-08-02T05:21:45.946Z</published>
+    <updated>2020-02-03T11:16:32.567Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-1-q5-feat.10/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-1-q5-feat.10/</id>
+    <published>2020-08-02T05:21:45.930Z</published>
+    <updated>2020-01-22T13:06:04.726Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-1-q4-nn.9/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-1-q4-nn.9/</id>
+    <published>2020-08-02T05:21:45.926Z</published>
+    <updated>2020-01-22T12:56:19.999Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-1-q3-softmax.5/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-1-q3-softmax.5/</id>
+    <published>2020-08-02T05:21:45.914Z</published>
+    <updated>2020-01-20T14:43:12.824Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-1-q2-svm.7/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-1-q2-svm.7/</id>
+    <published>2020-08-02T05:21:45.894Z</published>
+    <updated>2020-01-21T05:31:44.794Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://notplus.cn/2020/08/02/assignment-1-q1-knn.6/"/>
+    <id>http://notplus.cn/2020/08/02/assignment-1-q1-knn.6/</id>
+    <published>2020-08-02T05:21:45.870Z</published>
+    <updated>2020-01-21T05:27:22.339Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Few-shot Learning 概述</title>
+    <link href="http://notplus.cn/2020/03/07/few-shot-learning-gai-shu.16/"/>
+    <id>http://notplus.cn/2020/03/07/few-shot-learning-gai-shu.16/</id>
+    <published>2020-03-07T01:25:00.000Z</published>
+    <updated>2020-08-02T05:22:18.134Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Few-shot-Learning-概述-2020-02-10&quot;&gt;&lt;a href=&quot;#Few-shot-Learning-概述-2020-02-10&quot; class=&quot;headerlink&quot; title=&quot;Few-shot Learning 概述 
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
