@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://notplus.cn/"/>
-  <updated>2020-08-02T08:03:31.405Z</updated>
+  <updated>2020-08-02T07:09:00.613Z</updated>
   <id>http://notplus.cn/</id>
   
   <author>
@@ -15,21 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://notplus.cn/2020/08/02/test/"/>
-    <id>http://notplus.cn/2020/08/02/test/</id>
-    <published>2020-08-02T08:03:31.000Z</published>
-    <updated>2020-08-02T08:03:31.405Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Few-shot Learning 概述</title>
