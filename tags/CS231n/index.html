@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Notplus">
+    <meta name="keywords" content="标签: CS231n, Notplus">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Notplus</title>
+    <title>标签: CS231n | Notplus</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,56 +305,9 @@
 
 </header>
 
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -391,226 +344,72 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://github.com/notplus" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/notplus" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:notplus@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=513140802" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 513140802" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-    <a href="https://www.zhihu.com/people/notplus" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/notplus" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
 
 <main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/Deep-Learning/" title="Deep Learning: 11">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Deep Learning" style="background-color: #F9EBEA;">Deep Learning
+                        <span class="tag-length">11</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Assignment/" title="Assignment: 10">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Assignment" style="background-color: #F5EEF8;">Assignment
+                        <span class="tag-length">10</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/CS231n/" title="CS231n: 10">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="CS231n" style="background-color: #D5F5E3;">CS231n
+                        <span class="tag-length">10</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Few-shot-Learning/" title="Few-shot Learning: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Few-shot Learning" style="background-color: #E8F8F5;">Few-shot Learning
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+            </div>
         </div>
     </div>
 </div>
 
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
     
 
-    
-
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/03/07/few-shot-learning-gai-shu/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Few-shot Learning 概述">
-                            
-                            <span class="card-title">Few-shot Learning 概述</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Few-shot Learning 概述What is few-shot Learning?Few-shot Learning 是 Meta Learning 在监督学习领域的应用。Meta Learning，又称为learning to 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Deep-Learing/" class="post-category">
-                                    Deep Learing
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Few-shot-Learning/">
-                            <span class="chip bg-color">Few-shot Learning</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/17/assignment-2-q5-pytorch.15/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CS231 Assignment 2 Q5-PyTorch">
@@ -618,14 +417,7 @@
                             <span class="card-title">CS231 Assignment 2 Q5-PyTorch</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment2
-Code1. 实现一个三层全连接神经网络实现思路: 通过PyTorch实现一个三
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-17
@@ -635,38 +427,21 @@ Code1. 实现一个三层全连接神经网络实现思路: 通过PyTorch实现�
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/16/assignment-2-q4-convnet/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CS231 Assignment 2 Q4-ConvNet">
@@ -674,14 +449,7 @@ Code1. 实现一个三层全连接神经网络实现思路: 通过PyTorch实现�
                             <span class="card-title">CS231 Assignment 2 Q4-ConvNet</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment2
-Code1. Convolution: Naive forward实现思路: 通
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-16
@@ -691,38 +459,21 @@ Code1. Convolution: Naive forward实现思路: 通
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/15/assignment-2-q3-dropout/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="CS231 Assignment 2 Q3-Dropout">
@@ -730,14 +481,7 @@ Code1. Convolution: Naive forward实现思路: 通
                             <span class="card-title">CS231 Assignment 2 Q3-Dropout</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment2
-Code1. dropout forward实现思路: 参考论文[1],整体实现
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-15
@@ -747,38 +491,21 @@ Code1. dropout forward实现思路: 参考论文[1],整体实现
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/14/assignment-2-q2-batchnormalization/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="CS231 Assignment 2 Q2-BatchNormalization">
@@ -786,14 +513,7 @@ Code1. dropout forward实现思路: 参考论文[1],整体实现
                             <span class="card-title">CS231 Assignment 2 Q2-BatchNormalization</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment2
-Code1. batch normalization forward实现思路: 
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-14
@@ -803,38 +523,21 @@ Code1. batch normalization forward实现思路:
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/13/assignment-2-q1-fullyconnectednet/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="CS231 Assignment 2 Q1-FullyConnectedNet">
@@ -842,14 +545,7 @@ Code1. batch normalization forward实现思路:
                             <span class="card-title">CS231 Assignment 2 Q1-FullyConnectedNet</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment2
-Code1. affine layer forward &amp; backwa
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
@@ -859,38 +555,21 @@ Code1. affine layer forward &amp; backwa
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/12/assignment-1-q5-feat/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="CS231 Assignment 1 Q5-Feat">
@@ -898,14 +577,7 @@ Code1. affine layer forward &amp; backwa
                             <span class="card-title">CS231 Assignment 1 Q5-Feat</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment1
-Code1. 训练SVM分类器（多个学习率和正则化强度的准确率）实现思路:   
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-12
@@ -915,38 +587,21 @@ Code1. 训练SVM分类器（多个学习率和正则化强度的准确率）实�
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/11/assignment-1-q4-nn/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CS231 Assignment 1 Q4-NN">
@@ -954,14 +609,7 @@ Code1. 训练SVM分类器（多个学习率和正则化强度的准确率）实�
                             <span class="card-title">CS231 Assignment 1 Q4-NN</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment1
-Code1. 通过计算score,Loss和梯度实现思路: 该两层神经网络,可通
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-11
@@ -971,38 +619,21 @@ Code1. 通过计算score,Loss和梯度实现思路: 该两层神经网络,可通
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/09/assignment-1-q3-softmax/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CS231 Assignment 1 Q3-Softmax">
@@ -1010,14 +641,7 @@ Code1. 通过计算score,Loss和梯度实现思路: 该两层神经网络,可通
                             <span class="card-title">CS231 Assignment 1 Q3-Softmax</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment1
-Code1. 通过循环计算Loss和梯度实现思路: 与SVM类似,计算loss和
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-09
@@ -1027,38 +651,21 @@ Code1. 通过循环计算Loss和梯度实现思路: 与SVM类似,计算loss和
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/08/assignment-1-q2-svm/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CS231 Assignment 1 Q2-SVM">
@@ -1066,13 +673,7 @@ Code1. 通过循环计算Loss和梯度实现思路: 与SVM类似,计算loss和
                             <span class="card-title">CS231 Assignment 1 Q2-SVM</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目 [ cs231n-assignment1 ] ( https://github.com/notplus/cs231n
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
@@ -1082,38 +683,21 @@ Code1. 通过循环计算Loss和梯度实现思路: 与SVM类似,计算loss和
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Deep Learning, Assignment, CS231n" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/01/07/assignment-1-q1-knn/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="CS231 Assignment 1 Q1-KNN">
@@ -1121,14 +705,7 @@ Code1. 通过循环计算Loss和梯度实现思路: 与SVM类似,计算loss和
                             <span class="card-title">CS231 Assignment 1 Q1-KNN</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment1
-Code1. 通过两层循环计算L2实现思路: 对train和test数据切片，对
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-01-07
@@ -1138,37 +715,18 @@ Code1. 通过两层循环计算L2实现思路: 对train和test数据切片，对
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                                CS231 Assignment
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Assignment/">
-                            <span class="chip bg-color">Assignment</span>
-                        </a>
-                        
-                        <a href="/tags/CS231n/">
-                            <span class="chip bg-color">CS231n</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
         </div>
     </article>
-
 </main>
 
 
