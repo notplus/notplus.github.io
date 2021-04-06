@@ -31,5 +31,48 @@ x星的国王有个怪癖，他只喜欢数字3,5和7。
 ## 思路
 
 * 暴力法：循环进行直至最大值。耗时几十个小时，不可行
-* 生成法：
+* 生成法：依次生成幸运数，确定第几个。
+  * 生成过程中会出现重复元素，如何去除？
+  * 生成过程中元素并非有序，如何排序？
+
+
+
+## 解决方案
+
+使用C++ STL 数据类型`set` 有序且保证元素唯一
+
+
+
+## 代码
+
+```cpp
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+#define MAX 59084709587505
+
+int main()
+{
+	int a[3] = {3, 5, 7};
+	long long t = 1;
+	set<long long> s;
+	while (true)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			long long tt = t * a[i];
+			if (tt <= MAX)
+				s.insert(tt);
+		}
+		t = *(s.upper_bound(t));
+		if (t >= MAX)
+			break;
+	}
+	cout << s.size() << endl;
+	return 0;
+}
+
+```
 
