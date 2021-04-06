@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="Notplus" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Notplus" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -500,7 +500,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目<a target="_blank" rel="noopener" href="https://github.com/notplus/cs231n-assignment/tree/master/assignment2">cs231n-assignment2</a></p>
+                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目<a href="https://github.com/notplus/cs231n-assignment/tree/master/assignment2" target="_blank" rel="noopener">cs231n-assignment2</a></p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="1-实现一个三层全连接神经网络"><a href="#1-实现一个三层全连接神经网络" class="headerlink" title="1. 实现一个三层全连接神经网络"></a>1. 实现一个三层全连接神经网络</h3><p><strong>实现思路:</strong> 通过PyTorch实现一个三层神经网络 使用全连接层  根据官方文档进行组合即可 </p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">three_layer_convnet</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token triple-quoted-string string">"""
@@ -649,7 +649,7 @@ optimizer <span class="token operator">=</span> optim<span class="token punctuat
 <span class="token comment" spellcheck="true">#                                 END OF YOUR CODE                             </span>
 <span class="token comment" spellcheck="true">################################################################################</span>
 </code></pre>
-<h3 id="5-自行搭建网络对CIFAR-10进行分类"><a href="#5-自行搭建网络对CIFAR-10进行分类" class="headerlink" title="5. 自行搭建网络对CIFAR-10进行分类"></a>5. 自行搭建网络对CIFAR-10进行分类</h3><p>以下是我参考<a target="_blank" rel="noopener" href="http://zh.d2l.ai/chapter_convolutional-neural-networks/resnet.html">resnet</a>实现的Resnet-18</p>
+<h3 id="5-自行搭建网络对CIFAR-10进行分类"><a href="#5-自行搭建网络对CIFAR-10进行分类" class="headerlink" title="5. 自行搭建网络对CIFAR-10进行分类"></a>5. 自行搭建网络对CIFAR-10进行分类</h3><p>以下是我参考<a href="http://zh.d2l.ai/chapter_convolutional-neural-networks/resnet.html" target="_blank" rel="noopener">resnet</a>实现的Resnet-18</p>
 <pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">################################################################################</span>
 <span class="token comment" spellcheck="true"># TODO:                                                                        #         </span>
 <span class="token comment" spellcheck="true"># Experiment with any architectures, optimizers, and hyperparameters.          #</span>
@@ -696,11 +696,11 @@ optimizer <span class="token operator">=</span> None
             stride <span class="token operator">=</span> <span class="token number">1</span>
             <span class="token keyword">if</span> block_index <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">:</span>
                 stride <span class="token operator">=</span> <span class="token number">2</span>
-            nn_module<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span><span class="token string">'resnet_block_&amp;#123;:d&amp;#125;_&amp;#123;:d&amp;#125;'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>block_index<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>Residual<span class="token punctuation">(</span>in_channels<span class="token punctuation">,</span> out_channels<span class="token punctuation">,</span>use_1x1_conv<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>strides<span class="token operator">=</span>stride<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            nn_module<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span><span class="token string">'resnet_block_{:d}_{:d}'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>block_index<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>Residual<span class="token punctuation">(</span>in_channels<span class="token punctuation">,</span> out_channels<span class="token punctuation">,</span>use_1x1_conv<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>strides<span class="token operator">=</span>stride<span class="token punctuation">)</span><span class="token punctuation">)</span>
         <span class="token keyword">elif</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
-            nn_module<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span><span class="token string">'resnet_block_&amp;#123;:d&amp;#125;_&amp;#123;:d&amp;#125;'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>block_index<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>Residual<span class="token punctuation">(</span>in_channels<span class="token punctuation">,</span> out_channels<span class="token punctuation">)</span><span class="token punctuation">)</span> 
+            nn_module<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span><span class="token string">'resnet_block_{:d}_{:d}'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>block_index<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>Residual<span class="token punctuation">(</span>in_channels<span class="token punctuation">,</span> out_channels<span class="token punctuation">)</span><span class="token punctuation">)</span> 
         <span class="token keyword">else</span><span class="token punctuation">:</span>
-            nn_module<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span><span class="token string">'resnet_block_&amp;#123;:d&amp;#125;_&amp;#123;:d&amp;#125;'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>block_index<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>Residual<span class="token punctuation">(</span>out_channels<span class="token punctuation">,</span> out_channels<span class="token punctuation">)</span><span class="token punctuation">)</span> 
+            nn_module<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span><span class="token string">'resnet_block_{:d}_{:d}'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>block_index<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>Residual<span class="token punctuation">(</span>out_channels<span class="token punctuation">,</span> out_channels<span class="token punctuation">)</span><span class="token punctuation">)</span> 
 
 model <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>
     nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">64</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">,</span>stride<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>padding<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -728,8 +728,8 @@ optimizer <span class="token operator">=</span> optim<span class="token punctuat
 train_part34<span class="token punctuation">(</span>model<span class="token punctuation">,</span> optimizer<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span></code></pre>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本次作业主要是关于PyTorch的使用，大概了解了PyTorch的用法，可以看一些网络的代码，其实大同小异。</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://zh.d2l.ai/chapter_convolutional-neural-networks/resnet.html">5.11. 残差网络（ResNet）</a></li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.html#conv2d">TORCH.NN</a></li>
+<li><a href="http://zh.d2l.ai/chapter_convolutional-neural-networks/resnet.html" target="_blank" rel="noopener">5.11. 残差网络（ResNet）</a></li>
+<li><a href="https://pytorch.org/docs/stable/nn.html#conv2d" target="_blank" rel="noopener">TORCH.NN</a></li>
 </ul>
 
             </div>
@@ -1232,7 +1232,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.9k</span>&nbsp;字
+                class="white-color">17.8k</span>&nbsp;字
             
             
             

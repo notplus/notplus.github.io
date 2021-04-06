@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="Notplus" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Notplus" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -485,7 +485,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    22 分
+                    21 分
                 </div>
                 
 
@@ -500,7 +500,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目<a target="_blank" rel="noopener" href="https://github.com/notplus/cs231n-assignment/tree/master/assignment2">cs231n-assignment2</a></p>
+                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目<a href="https://github.com/notplus/cs231n-assignment/tree/master/assignment2" target="_blank" rel="noopener">cs231n-assignment2</a></p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="1-affine-layer-forward-amp-backward"><a href="#1-affine-layer-forward-amp-backward" class="headerlink" title="1. affine layer forward &amp; backward"></a>1. affine layer forward &amp; backward</h3><p><strong>实现思路:</strong>    </p>
 <ul>
 <li>前向传播直接进行点积即可，需注意<code>reshape</code>  </li>
@@ -667,7 +667,7 @@
           initialization of the weights.
         - reg: Scalar giving L2 regularization strength.
         """</span>
-        self<span class="token punctuation">.</span>params <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+        self<span class="token punctuation">.</span>params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
         self<span class="token punctuation">.</span>reg <span class="token operator">=</span> reg
 
         <span class="token comment" spellcheck="true">############################################################################</span>
@@ -731,7 +731,7 @@
         <span class="token keyword">if</span> y <span class="token keyword">is</span> None<span class="token punctuation">:</span>
             <span class="token keyword">return</span> scores
 
-        loss<span class="token punctuation">,</span> grads <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+        loss<span class="token punctuation">,</span> grads <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
         <span class="token comment" spellcheck="true">############################################################################</span>
         <span class="token comment" spellcheck="true"># TODO: Implement the backward pass for the two-layer net. Store the loss  #</span>
         <span class="token comment" spellcheck="true"># in the loss variable and gradients in the grads dictionary. Compute data #</span>
@@ -770,9 +770,9 @@ solver <span class="token operator">=</span> None
 model <span class="token operator">=</span> TwoLayerNet<span class="token punctuation">(</span>reg<span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">)</span>
 solver <span class="token operator">=</span> Solver<span class="token punctuation">(</span>model<span class="token punctuation">,</span> data<span class="token punctuation">,</span>
                 update_rule<span class="token operator">=</span><span class="token string">'sgd'</span><span class="token punctuation">,</span>
-                optim_config<span class="token operator">=</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                optim_config<span class="token operator">=</span><span class="token punctuation">{</span>
                     <span class="token string">'learning_rate'</span><span class="token punctuation">:</span> <span class="token number">1e</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span>
-                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
                 lr_decay<span class="token operator">=</span><span class="token number">0.95</span><span class="token punctuation">,</span>
                 num_epochs<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span>
                 print_every<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
@@ -801,9 +801,9 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
     dropout and batch/layer normalization as options. For a network with L layers,
     the architecture will be
 
-    &amp;#123;affine - [batch/layer norm] - relu - [dropout]&amp;#125; x (L - 1) - affine - softmax
+    {affine - [batch/layer norm] - relu - [dropout]} x (L - 1) - affine - softmax
 
-    where batch/layer normalization and dropout are optional, and the &amp;#123;...&amp;#125; block is
+    where batch/layer normalization and dropout are optional, and the {...} block is
     repeated L - 1 times.
 
     Similar to the TwoLayerNet above, learnable parameters are stored in the
@@ -839,7 +839,7 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
         self<span class="token punctuation">.</span>reg <span class="token operator">=</span> reg
         self<span class="token punctuation">.</span>num_layers <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">+</span> len<span class="token punctuation">(</span>hidden_dims<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>dtype <span class="token operator">=</span> dtype
-        self<span class="token punctuation">.</span>params <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+        self<span class="token punctuation">.</span>params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
         <span class="token comment" spellcheck="true">############################################################################</span>
         <span class="token comment" spellcheck="true"># TODO: Initialize the parameters of the network, storing all values in    #</span>
@@ -874,9 +874,9 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
         <span class="token comment" spellcheck="true"># When using dropout we need to pass a dropout_param dictionary to each</span>
         <span class="token comment" spellcheck="true"># dropout layer so that the layer knows the dropout probability and the mode</span>
         <span class="token comment" spellcheck="true"># (train / test). You can pass the same dropout_param to each dropout layer.</span>
-        self<span class="token punctuation">.</span>dropout_param <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+        self<span class="token punctuation">.</span>dropout_param <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
         <span class="token keyword">if</span> self<span class="token punctuation">.</span>use_dropout<span class="token punctuation">:</span>
-            self<span class="token punctuation">.</span>dropout_param <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'mode': 'train', 'p': dropout&amp;#125;</span>
+            self<span class="token punctuation">.</span>dropout_param <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'mode'</span><span class="token punctuation">:</span> <span class="token string">'train'</span><span class="token punctuation">,</span> <span class="token string">'p'</span><span class="token punctuation">:</span> dropout<span class="token punctuation">}</span>
             <span class="token keyword">if</span> seed <span class="token keyword">is</span> <span class="token operator">not</span> None<span class="token punctuation">:</span>
                 self<span class="token punctuation">.</span>dropout_param<span class="token punctuation">[</span><span class="token string">'seed'</span><span class="token punctuation">]</span> <span class="token operator">=</span> seed
 
@@ -887,9 +887,9 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
         <span class="token comment" spellcheck="true"># pass of the second batch normalization layer, etc.</span>
         self<span class="token punctuation">.</span>bn_params <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
         <span class="token keyword">if</span> self<span class="token punctuation">.</span>normalization<span class="token operator">==</span><span class="token string">'batchnorm'</span><span class="token punctuation">:</span>
-            self<span class="token punctuation">.</span>bn_params <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'mode': 'train'&amp;#125; for i in range(self.num_layers - 1)]</span>
+            self<span class="token punctuation">.</span>bn_params <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">'mode'</span><span class="token punctuation">:</span> <span class="token string">'train'</span><span class="token punctuation">}</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>num_layers <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
         <span class="token keyword">if</span> self<span class="token punctuation">.</span>normalization<span class="token operator">==</span><span class="token string">'layernorm'</span><span class="token punctuation">:</span>
-            self<span class="token punctuation">.</span>bn_params <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125; for i in range(self.num_layers - 1)]</span>
+            self<span class="token punctuation">.</span>bn_params <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>num_layers <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 
         <span class="token comment" spellcheck="true"># Cast all parameters to the correct datatype</span>
         <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> self<span class="token punctuation">.</span>params<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -928,8 +928,8 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
         <span class="token comment" spellcheck="true"># *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
 
         layer_input <span class="token operator">=</span> X
-        ar_cache <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
-        dp_cache <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+        ar_cache <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        dp_cache <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
         <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>num_layers<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
           <span class="token keyword">if</span> self<span class="token punctuation">.</span>normalization <span class="token operator">==</span> None<span class="token punctuation">:</span>
             layer_input<span class="token punctuation">,</span> ar_cache<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> affine_relu_forward<span class="token punctuation">(</span>layer_input<span class="token punctuation">,</span>self<span class="token punctuation">.</span>params<span class="token punctuation">[</span><span class="token string">'W%d'</span><span class="token operator">%</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>params<span class="token punctuation">[</span><span class="token string">'b%d'</span><span class="token operator">%</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>        
@@ -957,7 +957,7 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
         <span class="token keyword">if</span> mode <span class="token operator">==</span> <span class="token string">'test'</span><span class="token punctuation">:</span>
             <span class="token keyword">return</span> scores
 
-        loss<span class="token punctuation">,</span> grads <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+        loss<span class="token punctuation">,</span> grads <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
         <span class="token comment" spellcheck="true">############################################################################</span>
         <span class="token comment" spellcheck="true"># TODO: Implement the backward pass for the fully-connected net. Store the #</span>
         <span class="token comment" spellcheck="true"># loss in the loss variable and gradients in the grads dictionary. Compute #</span>
@@ -1014,7 +1014,7 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
     - velocity: A numpy array of the same shape as w and dw used to store a
       moving average of the gradients.
     """</span>
-    <span class="token keyword">if</span> config <span class="token keyword">is</span> None<span class="token punctuation">:</span> config <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+    <span class="token keyword">if</span> config <span class="token keyword">is</span> None<span class="token punctuation">:</span> config <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     config<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'learning_rate'</span><span class="token punctuation">,</span> <span class="token number">1e</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>
     config<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'momentum'</span><span class="token punctuation">,</span> <span class="token number">0.9</span><span class="token punctuation">)</span>
     v <span class="token operator">=</span> config<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'velocity'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>zeros_like<span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -1052,7 +1052,7 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
     - epsilon: Small scalar used for smoothing to avoid dividing by zero.
     - cache: Moving average of second moments of gradients.
     """</span>
-    <span class="token keyword">if</span> config <span class="token keyword">is</span> None<span class="token punctuation">:</span> config <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+    <span class="token keyword">if</span> config <span class="token keyword">is</span> None<span class="token punctuation">:</span> config <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     config<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'learning_rate'</span><span class="token punctuation">,</span> <span class="token number">1e</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>
     config<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'decay_rate'</span><span class="token punctuation">,</span> <span class="token number">0.99</span><span class="token punctuation">)</span>
     config<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'epsilon'</span><span class="token punctuation">,</span> <span class="token number">1e</span><span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">)</span>
@@ -1091,7 +1091,7 @@ acc <span class="token operator">=</span> np<span class="token punctuation">.</s
     - v: Moving average of squared gradient.
     - t: Iteration number.
     """</span>
-    <span class="token keyword">if</span> config <span class="token keyword">is</span> None<span class="token punctuation">:</span> config <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+    <span class="token keyword">if</span> config <span class="token keyword">is</span> None<span class="token punctuation">:</span> config <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     config<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'learning_rate'</span><span class="token punctuation">,</span> <span class="token number">1e</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span>
     config<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'beta1'</span><span class="token punctuation">,</span> <span class="token number">0.9</span><span class="token punctuation">)</span>
     config<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'beta2'</span><span class="token punctuation">,</span> <span class="token number">0.999</span><span class="token punctuation">)</span>
@@ -1139,9 +1139,9 @@ model <span class="token operator">=</span> FullyConnectedNet<span class="token 
 solver <span class="token operator">=</span> Solver<span class="token punctuation">(</span>model<span class="token punctuation">,</span> data<span class="token punctuation">,</span>
                 print_every<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> num_epochs<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span>
                 update_rule<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span>
-                optim_config<span class="token operator">=</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                optim_config<span class="token operator">=</span><span class="token punctuation">{</span>
                   <span class="token string">'learning_rate'</span><span class="token punctuation">:</span> learning_rate<span class="token punctuation">,</span>
-                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
                 lr_decay<span class="token operator">=</span><span class="token number">0.9</span>
          <span class="token punctuation">)</span>
 
@@ -1154,8 +1154,8 @@ best_model <span class="token operator">=</span> model
 <span class="token comment" spellcheck="true">################################################################################</span></code></pre>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本次作业亲手搭建一个神经网络，编写全连接层、ReLU层前向和反向传播，以及组合层。个人做起来还是比较吃力，<br>在实现任意层神经网络时BN层和LN层卡了很久，其实应该在实现BN层和LN层再来写相关代码，会顺畅很多。</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/21798784">CS231n课程笔记翻译：神经网络笔记3（下）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/lightaime/cs231n">lightaime/cs231n</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/21798784" target="_blank" rel="noopener">CS231n课程笔记翻译：神经网络笔记3（下）</a></li>
+<li><a href="https://github.com/lightaime/cs231n" target="_blank" rel="noopener">lightaime/cs231n</a></li>
 </ul>
 
             </div>
@@ -1663,7 +1663,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.9k</span>&nbsp;字
+                class="white-color">17.8k</span>&nbsp;字
             
             
             

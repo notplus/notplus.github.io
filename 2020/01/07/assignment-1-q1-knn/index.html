@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="Notplus" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Notplus" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -500,7 +500,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目<a target="_blank" rel="noopener" href="https://github.com/notplus/cs231n-assignment/tree/master/assignment1">cs231n-assignment1</a></p>
+                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目<a href="https://github.com/notplus/cs231n-assignment/tree/master/assignment1" target="_blank" rel="noopener">cs231n-assignment1</a></p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="1-通过两层循环计算L2"><a href="#1-通过两层循环计算L2" class="headerlink" title="1. 通过两层循环计算L2"></a>1. 通过两层循环计算L2</h3><p><strong>实现思路:</strong> 对train和test数据切片，对应进行L2计算</p>
 <pre class=" language-python"><code class="language-python">    <span class="token keyword">def</span> <span class="token function">compute_distances_two_loops</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> X<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">"""
@@ -543,7 +543,7 @@
 <li>通过调用<code>npargsort</code>函数，实现对单层test数据L2的排序，输出结果是从小到大排序后的下标。</li>
 <li>这句代码<code>closest_y = self.y_train[train_topK_index]</code>用到了整型数组访问语法，即取出<code>self.y_train</code>中以<code>train_topK_index</code>中包含的值为下标的内容。</li>
 <li><code>y_pred[i]=Counter(closest_y).most_common(1)[0][0]</code>使用了Collections模块，函数返回一个TopN列表</li>
-<li>也可使用<code>count = np.bincount(closest_y)</code>和<code>y_pred[i] = np.argmax(count)</code>来得到y_pred[i]，关于np.bincount可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/xlinsist/article/details/51346523">np.bitcount</a><pre class=" language-python"><code class="language-python">  <span class="token keyword">def</span> <span class="token function">predict_labels</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> dists<span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<li>也可使用<code>count = np.bincount(closest_y)</code>和<code>y_pred[i] = np.argmax(count)</code>来得到y_pred[i]，关于np.bincount可参考<a href="https://blog.csdn.net/xlinsist/article/details/51346523" target="_blank" rel="noopener">np.bitcount</a><pre class=" language-python"><code class="language-python">  <span class="token keyword">def</span> <span class="token function">predict_labels</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> dists<span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
       <span class="token string">""</span>"
       Given a matrix of distances between test points <span class="token operator">and</span> training points<span class="token punctuation">,</span>
       predict a label <span class="token keyword">for</span> each test point<span class="token punctuation">.</span>
@@ -713,7 +713,7 @@ y_train_folds=np.array_split(y_train,num_folds)
 # when running cross-validation. After running cross-validation,
 # k_to_accuracies[k] should be a list of length num_folds giving the different
 # accuracy values that we found when using that value of k.
-k_to_accuracies = &amp;#123;&amp;#125;
+k_to_accuracies = {}
 
 
 ################################################################################
@@ -747,11 +747,11 @@ for k in k_choices:
 </ul>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本次作业主要是KNN分类器的实现，由于对于python及numpy模块的不熟悉，导致作业完成得很吃力，希望能够加强掌握。<br>这次作业也发现了做科学计算或者深度学习相关内容，处理数据时的效率问题，for循环的效率明显低于向量、矩阵运算（本次作业里的测试，for循环大概用时200-300s，向量、矩阵运算大概用时0.68s）尽管矩阵运算需要消耗大量内存资源，但还是时间宝贵嘛。当然，具体问题还需要具体分析。</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://cs231n.github.io/classification/">cs231n classification</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20894041?refer=intelligentunit">CS231n课程笔记翻译：图像分类笔记（上）</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20900216">CS231n课程笔记翻译：图像分类笔记（下）</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20878530?refer=intelligentunit">CS231n课程笔记翻译：Python Numpy教程</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/275eda2294ea">CS231n课程作业（一）KNN分类器</a></li>
+<li><a href="http://cs231n.github.io/classification/" target="_blank" rel="noopener">cs231n classification</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/20894041?refer=intelligentunit" target="_blank" rel="noopener">CS231n课程笔记翻译：图像分类笔记（上）</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/20900216" target="_blank" rel="noopener">CS231n课程笔记翻译：图像分类笔记（下）</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/20878530?refer=intelligentunit" target="_blank" rel="noopener">CS231n课程笔记翻译：Python Numpy教程</a></li>
+<li><a href="https://www.jianshu.com/p/275eda2294ea" target="_blank" rel="noopener">CS231n课程作业（一）KNN分类器</a></li>
 </ul>
 
             </div>
@@ -1259,7 +1259,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.9k</span>&nbsp;字
+                class="white-color">17.8k</span>&nbsp;字
             
             
             

@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="Notplus" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Notplus" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -500,7 +500,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目 [ cs231n-assignment1 ] ( <a target="_blank" rel="noopener" href="https://github.com/notplus/cs231n-assignment/tree/master/assignment1">https://github.com/notplus/cs231n-assignment/tree/master/assignment1</a> )</p>
+                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目 [ cs231n-assignment1 ] ( <a href="https://github.com/notplus/cs231n-assignment/tree/master/assignment1" target="_blank" rel="noopener">https://github.com/notplus/cs231n-assignment/tree/master/assignment1</a> )</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="1-通过循环计算Loss和梯度"><a href="#1-通过循环计算Loss和梯度" class="headerlink" title="1. 通过循环计算Loss和梯度"></a>1. 通过循环计算Loss和梯度</h3><p><strong>实现思路:</strong>  通过微分公式,计算梯度，只有 <code>margin</code> 中大于0的对梯度有贡献,公式如下：<br>$L_{i}=\ sum <em>{j \ neq  y</em>{i}}\ left [\ max  \ left (0, w_{j}^{T} x_{i}-w_{y_{i}}^{T} x_{i}+\ Delta \ right )\ right ]$   </p>
 <p>$\ nabla <em>{w</em>{y_{i}}} L_{i}=-\ left (\ sum <em>{j \ neq  y</em>{i}} \ mathbb {1} \ left (w_{j}^{T} x_{i}-w_{y_{i}}^{T} x_{i}+\ Delta &gt;0\ right )\ right ) x_{i}$<br>其中 1 是一个示性函数，如果括号中的条件为真，那么函数值为1，如果为假，则函数值为0。</p>
 <p>$\ nabla <em>{w</em>{j}} L_{i}=1\ left (w_{j}^{T} x_{i}-w_{y_{i}}^{T} x_{i}+\ Delta &gt;0\ right ) x_{i}$</p>
@@ -734,10 +734,10 @@ svm  <span class="token operator">=</span>   LinearSVM <span class="token punctu
 <h3 id="5-多个学习率和正则化强度可视化结果"><a href="#5-多个学习率和正则化强度可视化结果" class="headerlink" title="5. 多个学习率和正则化强度可视化结果"></a>5. 多个学习率和正则化强度可视化结果</h3><p><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/1.jpg" alt="1"><br><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200113205726.png" alt="2"></p>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本次作业主要是SVM线性分类器的实现，由于对于python及numpy模块的不熟悉，导致作业完成得很吃力，希望能够加强掌握。<br>需要着重掌握numpy中数组的操作，灵活实现向量化运算。</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://cs231n.github.io/optimization-1/">cs231n optimization</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/21360434">CS231n课程笔记翻译：最优化笔记（上）</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/21387326">CS231n课程笔记翻译：最优化笔记（下）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/lightaime/cs231n">lightaime/cs231n</a></li>
+<li><a href="http://cs231n.github.io/optimization-1/" target="_blank" rel="noopener">cs231n optimization</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/21360434" target="_blank" rel="noopener">CS231n课程笔记翻译：最优化笔记（上）</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/21387326" target="_blank" rel="noopener">CS231n课程笔记翻译：最优化笔记（下）</a></li>
+<li><a href="https://github.com/lightaime/cs231n" target="_blank" rel="noopener">lightaime/cs231n</a></li>
 </ul>
 
             </div>
@@ -1245,7 +1245,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.9k</span>&nbsp;字
+                class="white-color">17.8k</span>&nbsp;字
             
             
             
