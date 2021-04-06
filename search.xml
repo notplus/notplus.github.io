@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>蓝桥杯 2018省赛 C/C++ A T4</title>
+      <link href="/2021/04/06/lanqiao-2018p-ca-t4/"/>
+      <url>/2021/04/06/lanqiao-2018p-ca-t4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="蓝桥杯-2018省赛-C-C-A-T4"><a href="#蓝桥杯-2018省赛-C-C-A-T4" class="headerlink" title="蓝桥杯 2018省赛 C/C++ A T4"></a>蓝桥杯 2018省赛 C/C++ A T4</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>标题：第几个幸运数</p><p>到x星球旅行的游客都被发给一个整数，作为游客编号。<br>x星的国王有个怪癖，他只喜欢数字3,5和7。<br>国王规定，游客的编号如果只含有因子：3,5,7,就可以获得一份奖品。</p><p>我们来看前10个幸运数字是：<br>3 5 7 9 15 21 25 27 35 45<br>因而第11个幸运数字是：49</p><p>小明领到了一个幸运数字 59084709587505，他去领奖的时候，人家要求他准确地说出这是第几个幸运数字，否则领不到奖品。</p><p>请你帮小明计算一下，59084709587505是第几个幸运数字。</p><p>需要提交的是一个整数，请不要填写任何多余内容。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul><li>暴力法：循环进行直至最大值。耗时几十个小时，不可行</li><li>生成法：</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -lanqiao </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Few-shot Learning 概述</title>
       <link href="/2020/03/07/few-shot-learning-gai-shu/"/>
       <url>/2020/03/07/few-shot-learning-gai-shu/</url>
