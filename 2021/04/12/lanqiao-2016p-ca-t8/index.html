@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CS231 Assignment 1 Q3-Softmax, Notplus">
+    <meta name="keywords" content="蓝桥杯 2018省赛 C/C++ A T4, Notplus">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CS231 Assignment 1 Q3-Softmax | Notplus</title>
+    <title>蓝桥杯 2018省赛 C/C++ A T4 | Notplus</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CS231 Assignment 1 Q3-Softmax</h1>
+                    <h1 class="description center-align post-title">蓝桥杯 2018省赛 C/C++ A T4</h1>
                 </div>
             </div>
         </div>
@@ -431,16 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Deep-Learning/">
-                                <span class="chip bg-color">Deep Learning</span>
-                            </a>
-                        
-                            <a href="/tags/Assignment/">
-                                <span class="chip bg-color">Assignment</span>
-                            </a>
-                        
-                            <a href="/tags/CS231n/">
-                                <span class="chip bg-color">CS231n</span>
+                            <a href="/tags/Lanqiao/">
+                                <span class="chip bg-color">Lanqiao</span>
                             </a>
                         
                     </div>
@@ -451,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/CS231-Assignment/" class="post-category">
-                                CS231 Assignment
+                            <a href="/categories/Algorithm/" class="post-category">
+                                Algorithm
                             </a>
                         
                     </div>
@@ -464,28 +456,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-09
+                    2021-04-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-02
+                    2021-04-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    842
+                    522
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -500,136 +492,52 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目<a href="https://github.com/notplus/cs231n-assignment/tree/master/assignment1" target="_blank" rel="noopener">cs231n-assignment1</a></p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="1-通过循环计算Loss和梯度"><a href="#1-通过循环计算Loss和梯度" class="headerlink" title="1. 通过循环计算Loss和梯度"></a>1. 通过循环计算Loss和梯度</h3><p><strong>实现思路:</strong> 与SVM类似,计算loss和grad,损失函数如下：<br>$L i=-\log \left(\frac{e^{f_{y_{i}}}}{\sum_{j} e^{f_{j}}}\right)$<br><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200120223945.png" alt="20200120223945.png"></p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">softmax_loss_naive</span><span class="token punctuation">(</span>W<span class="token punctuation">,</span> X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> reg<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    Softmax loss function, naive implementation (with loops)
-
-    Inputs have dimension D, there are C classes, and we operate on minibatches
-    of N examples.
-
-    Inputs:
-    - W: A numpy array of shape (D, C) containing weights.
-    - X: A numpy array of shape (N, D) containing a minibatch of data.
-    - y: A numpy array of shape (N,) containing training labels; y[i] = c means
-      that X[i] has label c, where 0 &lt;= c &lt; C.
-    - reg: (float) regularization strength
-
-    Returns a tuple of:
-    - loss as single float
-    - gradient with respect to weights W; an array of same shape as W
-    """</span>
-    <span class="token comment" spellcheck="true"># Initialize the loss and gradient to zero.</span>
-    loss <span class="token operator">=</span> <span class="token number">0.0</span>
-    dW <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros_like<span class="token punctuation">(</span>W<span class="token punctuation">)</span>
-
-    <span class="token comment" spellcheck="true">#############################################################################</span>
-    <span class="token comment" spellcheck="true"># TODO: Compute the softmax loss and its gradient using explicit loops.     #</span>
-    <span class="token comment" spellcheck="true"># Store the loss in loss and the gradient in dW. If you are not careful     #</span>
-    <span class="token comment" spellcheck="true"># here, it is easy to run into numeric instability. Don't forget the        #</span>
-    <span class="token comment" spellcheck="true"># regularization!                                                           #</span>
-    <span class="token comment" spellcheck="true">#############################################################################</span>
-    <span class="token comment" spellcheck="true"># *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-
-    num_train <span class="token operator">=</span> X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    num_classes <span class="token operator">=</span> W<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
-
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>num_train<span class="token punctuation">)</span><span class="token punctuation">:</span>
-      scores <span class="token operator">=</span> X<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>dot<span class="token punctuation">(</span>W<span class="token punctuation">)</span>
-      shift_scores <span class="token operator">=</span> scores <span class="token operator">-</span> max<span class="token punctuation">(</span>scores<span class="token punctuation">)</span>
-      loss_i <span class="token operator">=</span> <span class="token operator">-</span> shift_scores<span class="token punctuation">[</span>y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>log<span class="token punctuation">(</span>sum<span class="token punctuation">(</span>np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>shift_scores<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-      loss <span class="token operator">+=</span> loss_i
-      <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>num_classes<span class="token punctuation">)</span><span class="token punctuation">:</span>
-          softmax_output <span class="token operator">=</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>shift_scores<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span>sum<span class="token punctuation">(</span>np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>shift_scores<span class="token punctuation">)</span><span class="token punctuation">)</span>
-          <span class="token keyword">if</span> j <span class="token operator">==</span> y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span>
-              dW<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span>j<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span> <span class="token operator">+</span> softmax_output<span class="token punctuation">)</span> <span class="token operator">*</span>X<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-          <span class="token keyword">else</span><span class="token punctuation">:</span>
-              dW<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span>j<span class="token punctuation">]</span> <span class="token operator">+=</span> softmax_output <span class="token operator">*</span>X<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-
-    loss <span class="token operator">/=</span> num_train
-    loss <span class="token operator">+=</span>  <span class="token number">0.5</span><span class="token operator">*</span> reg <span class="token operator">*</span> np<span class="token punctuation">.</span>sum<span class="token punctuation">(</span>W <span class="token operator">*</span> W<span class="token punctuation">)</span>
-    dW <span class="token operator">=</span> dW<span class="token operator">/</span>num_train <span class="token operator">+</span> reg<span class="token operator">*</span> W
-    <span class="token comment" spellcheck="true"># *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-
-    <span class="token keyword">return</span> loss<span class="token punctuation">,</span> dW</code></pre>
-<h3 id="2-实现svm-loss-vectorized-函数"><a href="#2-实现svm-loss-vectorized-函数" class="headerlink" title="2. 实现svm_loss_vectorized 函数"></a>2. 实现<code>svm_loss_vectorized</code> 函数</h3><p><strong>实现思路：</strong></p>
+                <h1 id="蓝桥杯-2016省赛-C-C-A-T8"><a href="#蓝桥杯-2016省赛-C-C-A-T8" class="headerlink" title="蓝桥杯 2016省赛 C/C++ A T8"></a>蓝桥杯 2016省赛 C/C++ A T8</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>暴力枚举优化：</p>
 <ul>
-<li>主要使用向量化解决，计算loss灵活应用整型访问和广播机制，计算grad灵活应用矩阵乘法，通过构造矩阵乘法免去累加和循环</li>
-<li>灵活使用 <code>[range(num_train), list(y)]</code> </li>
+<li>减少枚举范围</li>
+<li>减少枚举变量 （可通过缓存对枚举进行优化）</li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">softmax_loss_vectorized</span><span class="token punctuation">(</span>W<span class="token punctuation">,</span> X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> reg<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    Softmax loss function, vectorized version.
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
+<p>四平方和</p>
+<p>四平方和定理，又称为拉格朗日定理：<br>每个正整数都可以表示为至多4个正整数的平方和。<br>如果把0包括进去，就正好可以表示为4个数的平方和。</p>
+<p>比如：<br>5 = 0^2 + 0^2 + 1^2 + 2^2<br>7 = 1^2 + 1^2 + 1^2 + 2^2<br>（^符号表示乘方的意思）</p>
+<p>对于一个给定的正整数，可能存在多种平方和的表示法。<br>要求你对4个数排序：<br>0 &lt;= a &lt;= b &lt;= c &lt;= d<br>并对所有的可能表示法按 a,b,c,d 为联合主键升序排列，最后输出第一个表示法</p>
+<p>程序输入为一个正整数N (N&lt;5000000)<br>要求输出4个非负整数，按从小到大排序，中间用空格分开</p>
+<p>例如，输入：<br>5<br>则程序应该输出：<br>0 0 1 2</p>
+<p>再例如，输入：<br>12<br>则程序应该输出：<br>0 2 2 2</p>
+<p>再例如，输入：<br>773535<br>则程序应该输出：<br>1 1 267 838</p>
+<p>资源约定：<br>峰值内存消耗 &lt; 256M<br>CPU消耗  &lt; 3000ms</p>
+</blockquote>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>首先考虑枚举，由于N到10的6次方的量级，暴力枚举复杂度过高。考虑减少枚举变量，通过缓存方法降低复杂度。先生成c和d的平方和并缓存，再遍历a、b，只需要查找N与a、b的平方和的差值是否在缓存中即可。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cmath></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;map></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-    Inputs and outputs are the same as softmax_loss_naive.
-    """</span>
-    <span class="token comment" spellcheck="true"># Initialize the loss and gradient to zero.</span>
-    loss <span class="token operator">=</span> <span class="token number">0.0</span>
-    dW <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros_like<span class="token punctuation">(</span>W<span class="token punctuation">)</span>
+<span class="token keyword">int</span> N<span class="token punctuation">;</span>
+map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> cache<span class="token punctuation">;</span>
 
-    <span class="token comment" spellcheck="true">#############################################################################</span>
-    <span class="token comment" spellcheck="true"># TODO: Compute the softmax loss and its gradient using no explicit loops.  #</span>
-    <span class="token comment" spellcheck="true"># Store the loss in loss and the gradient in dW. If you are not careful     #</span>
-    <span class="token comment" spellcheck="true"># here, it is easy to run into numeric instability. Don't forget the        #</span>
-    <span class="token comment" spellcheck="true"># regularization!                                                           #</span>
-    <span class="token comment" spellcheck="true">#############################################################################</span>
-    <span class="token comment" spellcheck="true"># *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>N<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>c<span class="token operator">*</span>c<span class="token operator">&lt;=</span>N<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>c<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> d<span class="token operator">=</span>c<span class="token punctuation">;</span>d<span class="token operator">*</span>d<span class="token operator">&lt;=</span>N<span class="token punctuation">;</span>d<span class="token operator">++</span><span class="token punctuation">)</span>
+            cache<span class="token punctuation">[</span>c<span class="token operator">*</span>c<span class="token operator">+</span>d<span class="token operator">*</span>d<span class="token punctuation">]</span><span class="token operator">=</span>c<span class="token punctuation">;</span>
 
-    num_train <span class="token operator">=</span> X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    num_classes <span class="token operator">=</span> W<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>a<span class="token operator">*</span>a<span class="token operator">&lt;=</span>N<span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">;</span>a<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> b<span class="token operator">=</span>a<span class="token punctuation">;</span>b<span class="token operator">*</span>b<span class="token operator">&lt;=</span>N<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>b<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cache<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>N<span class="token operator">-</span>a<span class="token operator">*</span>a<span class="token operator">-</span>b<span class="token operator">*</span>b<span class="token punctuation">)</span><span class="token operator">!=</span>cache<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> c<span class="token operator">=</span>cache<span class="token punctuation">[</span>N<span class="token operator">-</span>a<span class="token operator">*</span>a<span class="token operator">-</span>b<span class="token operator">*</span>b<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> d <span class="token operator">=</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token function">sqrt</span><span class="token punctuation">(</span>N<span class="token operator">-</span>a<span class="token operator">*</span>a<span class="token operator">-</span>b<span class="token operator">*</span>b<span class="token operator">-</span>c<span class="token operator">*</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d %d %d %d"</span><span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-    scores <span class="token operator">=</span> X<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>W<span class="token punctuation">)</span>
-    shift_scores <span class="token operator">=</span> scores <span class="token operator">-</span> np<span class="token punctuation">.</span>max<span class="token punctuation">(</span>scores<span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
-    softmax_output <span class="token operator">=</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>shift_scores<span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span>sum<span class="token punctuation">(</span>np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>shift_scores<span class="token punctuation">)</span><span class="token punctuation">,</span> axis <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">#loss = np.sum(-shift_scores[range(num_train),list(y)].reshape(-1,1) + np.log(np.sum(np.exp(shift_scores),axis=1).reshape(-1,1)))</span>
-    loss <span class="token operator">=</span> <span class="token operator">-</span>np<span class="token punctuation">.</span>sum<span class="token punctuation">(</span>np<span class="token punctuation">.</span>log<span class="token punctuation">(</span>softmax_output<span class="token punctuation">[</span>range<span class="token punctuation">(</span>num_train<span class="token punctuation">)</span><span class="token punctuation">,</span>list<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    loss <span class="token operator">=</span> loss <span class="token operator">/</span> num_train <span class="token operator">+</span> <span class="token number">0.5</span> <span class="token operator">*</span> reg <span class="token operator">*</span> np<span class="token punctuation">.</span>sum<span class="token punctuation">(</span>W <span class="token operator">*</span> W<span class="token punctuation">)</span>
-
-    dS <span class="token operator">=</span> softmax_output<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    dS<span class="token punctuation">[</span>range<span class="token punctuation">(</span>num_train<span class="token punctuation">)</span><span class="token punctuation">,</span>list<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">-=</span><span class="token number">1</span>
-    dW <span class="token operator">=</span> <span class="token punctuation">(</span>X<span class="token punctuation">.</span>T<span class="token punctuation">)</span><span class="token punctuation">.</span>dot<span class="token punctuation">(</span>dS<span class="token punctuation">)</span>
-    dW <span class="token operator">/=</span> num_train
-    dW <span class="token operator">+=</span> reg <span class="token operator">*</span> W
-    <span class="token comment" spellcheck="true"># *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-
-    <span class="token keyword">return</span> loss<span class="token punctuation">,</span> dW</code></pre>
-<h3 id="3-计算多个学习率和正则化强度的准确率"><a href="#3-计算多个学习率和正则化强度的准确率" class="headerlink" title="3. 计算多个学习率和正则化强度的准确率"></a>3. 计算多个学习率和正则化强度的准确率</h3><p><strong>实现思路:</strong>   </p>
-<ul>
-<li>两次循环计算即可</li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">################################################################################</span>
-<span class="token comment" spellcheck="true"># TODO:                                                                        #</span>
-<span class="token comment" spellcheck="true"># Use the validation set to set the learning rate and regularization strength. #</span>
-<span class="token comment" spellcheck="true"># This should be identical to the validation that you did for the SVM; save    #</span>
-<span class="token comment" spellcheck="true"># the best trained softmax classifer in best_softmax.                          #</span>
-<span class="token comment" spellcheck="true">################################################################################</span>
-<span class="token comment" spellcheck="true"># *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-
-<span class="token keyword">for</span> learning_rate <span class="token keyword">in</span> learning_rates<span class="token punctuation">:</span>
-    <span class="token keyword">for</span> regularization_strength <span class="token keyword">in</span> regularization_strengths<span class="token punctuation">:</span>
-        softmax <span class="token operator">=</span> Softmax<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        loss <span class="token operator">=</span> softmax<span class="token punctuation">.</span>train<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> learning_rate<span class="token operator">=</span>learning_rate<span class="token punctuation">,</span> reg<span class="token operator">=</span>regularization_strength
-                             <span class="token punctuation">,</span> num_iters<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-        y_train_pred <span class="token operator">=</span> softmax<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_train<span class="token punctuation">)</span>
-        train_accuracy <span class="token operator">=</span> np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>y_train <span class="token operator">==</span> y_train_pred<span class="token punctuation">)</span>
-        y_val_pred <span class="token operator">=</span> softmax<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_val<span class="token punctuation">)</span>
-        val_accuracy <span class="token operator">=</span> np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>y_val <span class="token operator">==</span> y_val_pred<span class="token punctuation">)</span>
-        results<span class="token punctuation">[</span><span class="token punctuation">(</span>learning_rate<span class="token punctuation">,</span>regularization_strength<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">(</span>train_accuracy<span class="token punctuation">,</span>val_accuracy<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> val_accuracy <span class="token operator">></span> best_val<span class="token punctuation">:</span>
-            best_val <span class="token operator">=</span> val_accuracy
-            best_softmax <span class="token operator">=</span> softmax
-
-
-<span class="token comment" spellcheck="true"># *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span></code></pre>
-<h3 id="4-多个学习率和正则化强度可视化结果"><a href="#4-多个学习率和正则化强度可视化结果" class="headerlink" title="4. 多个学习率和正则化强度可视化结果"></a>4. 多个学习率和正则化强度可视化结果</h3><p><img src="https://raw.githubusercontent.com/wuliutx/upload-pic/master/20200120224102.png" alt="20200120224102.png"></p>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本次作业主要是对于softmax的应用，总体与svm类似，主要难点在于梯度的推导与计算。<br>需要着重掌握numpy中数组的操作，灵活实现向量化运算。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="http://cs231n.github.io/optimization-1/" target="_blank" rel="noopener">cs231n optimization</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/21102293" target="_blank" rel="noopener">CS231n课程笔记翻译：线性分类笔记（下）</a></li>
-<li><a href="https://www.cnblogs.com/shixiangwan/p/9285233.html" target="_blank" rel="noopener">Deep Learning基础–Softmax求导过程</a></li>
-<li><a href="https://github.com/lightaime/cs231n" target="_blank" rel="noopener">lightaime/cs231n</a></li>
-</ul>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 
             </div>
             <hr/>
@@ -655,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://notplus.cn/2020/01/09/assignment-1-q3-softmax/">http://notplus.cn/2020/01/09/assignment-1-q3-softmax/</a>
+                    <a href="http://notplus.cn/2021/04/12/lanqiao-2016p-ca-t8/">http://notplus.cn/2021/04/12/lanqiao-2016p-ca-t8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -693,16 +601,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Deep-Learning/">
-                                    <span class="chip bg-color">Deep Learning</span>
-                                </a>
-                            
-                                <a href="/tags/Assignment/">
-                                    <span class="chip bg-color">Assignment</span>
-                                </a>
-                            
-                                <a href="/tags/CS231n/">
-                                    <span class="chip bg-color">CS231n</span>
+                                <a href="/tags/Lanqiao/">
+                                    <span class="chip bg-color">Lanqiao</span>
                                 </a>
                             
                         </div>
@@ -870,55 +770,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/11/assignment-1-q4-nn/">
+                <a href="/2021/04/12/lanqiao-2016p-ca-t8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CS231 Assignment 1 Q4-NN">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="蓝桥杯 2018省赛 C/C++ A T4">
                         
-                        <span class="card-title">CS231 Assignment 1 Q4-NN</span>
+                        <span class="card-title">蓝桥杯 2018省赛 C/C++ A T4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment1
-Code1. 通过计算score,Loss和梯度实现思路: 该两层神经网络,可通
+                            蓝桥杯 2016省赛 C/C++ A T8知识点暴力枚举优化：
+
+减少枚举范围
+减少枚举变量 （可通过缓存对枚举进行优化）
+
+题目
+四平方和
+四平方和定理，又称为拉格朗日定理：每个正整数都可以表示为至多4个正整数的平方和。如果把0包括进去，
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                            <a href="/categories/Algorithm/" class="post-category">
+                                    Algorithm
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Deep-Learning/">
-                        <span class="chip bg-color">Deep Learning</span>
-                    </a>
-                    
-                    <a href="/tags/Assignment/">
-                        <span class="chip bg-color">Assignment</span>
-                    </a>
-                    
-                    <a href="/tags/CS231n/">
-                        <span class="chip bg-color">CS231n</span>
+                    <a href="/tags/Lanqiao/">
+                        <span class="chip bg-color">Lanqiao</span>
                     </a>
                     
                 </div>
@@ -932,31 +832,35 @@ Code1. 通过计算score,Loss和梯度实现思路: 该两层神经网络,可通
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/08/assignment-1-q2-svm/">
+                <a href="/2021/04/12/lanqiao-2015p-ca-t7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CS231 Assignment 1 Q2-SVM">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="蓝桥杯 2015省赛 C/C++ A T7">
                         
-                        <span class="card-title">CS231 Assignment 1 Q2-SVM</span>
+                        <span class="card-title">蓝桥杯 2015省赛 C/C++ A T7</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目 [ cs231n-assignment1 ] ( https://github.com/notplus/cs231n
+                            蓝桥杯 2015省赛 C/C++ A T7知识点有重复元素的圆排列与环排列的计数问题
+全排列+特殊去重
+题目
+手链样式
+小明有3颗红珊瑚，4颗白珊瑚，5颗黄玛瑙。他想用它们串成一圈作为手链，送给女朋友。现在小明想知道：如果考虑手链可以随意转
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                            <a href="/categories/Algorithm/" class="post-category">
+                                    Algorithm
                                 </a>
                             
                             
@@ -966,16 +870,8 @@ Code1. 通过计算score,Loss和梯度实现思路: 该两层神经网络,可通
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Deep-Learning/">
-                        <span class="chip bg-color">Deep Learning</span>
-                    </a>
-                    
-                    <a href="/tags/Assignment/">
-                        <span class="chip bg-color">Assignment</span>
-                    </a>
-                    
-                    <a href="/tags/CS231n/">
-                        <span class="chip bg-color">CS231n</span>
+                    <a href="/tags/Lanqiao/">
+                        <span class="chip bg-color">Lanqiao</span>
                     </a>
                     
                 </div>
@@ -1113,13 +1009,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
