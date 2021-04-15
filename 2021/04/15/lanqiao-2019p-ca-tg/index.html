@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="蓝桥杯 2015省赛 C/C++ A T7, Notplus">
+    <meta name="keywords" content="蓝桥杯 2019省赛 C/C++ A TG, Notplus">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>蓝桥杯 2015省赛 C/C++ A T7 | Notplus</title>
+    <title>蓝桥杯 2019省赛 C/C++ A TG | Notplus</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">蓝桥杯 2015省赛 C/C++ A T7</h1>
+                    <h1 class="description center-align post-title">蓝桥杯 2019省赛 C/C++ A TG</h1>
                 </div>
             </div>
         </div>
@@ -456,28 +456,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-12
+                    2021-04-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-12
+                    2021-04-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    366
+                    880
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -492,46 +492,102 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="蓝桥杯-2015省赛-C-C-A-T7"><a href="#蓝桥杯-2015省赛-C-C-A-T7" class="headerlink" title="蓝桥杯 2015省赛 C/C++ A T7"></a>蓝桥杯 2015省赛 C/C++ A T7</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>有重复元素的圆排列与环排列的计数问题</p>
-<p>全排列+特殊去重</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
-<p>手链样式</p>
-<p>小明有3颗红珊瑚，4颗白珊瑚，5颗黄玛瑙。<br>他想用它们串成一圈作为手链，送给女朋友。<br>现在小明想知道：如果考虑手链可以随意转动或翻转，一共可以有多少不同的组合样式呢？</p>
-<p>请你提交该整数。不要填写任何多余的内容或说明性的文字。</p>
+                <h1 id="蓝桥杯-2019省赛-C-C-A-TG"><a href="#蓝桥杯-2019省赛-C-C-A-TG" class="headerlink" title="蓝桥杯 2019省赛 C/C++ A TG"></a>蓝桥杯 2019省赛 C/C++ A TG</h1><h2 id="题目¶"><a href="#题目¶" class="headerlink" title="题目¶"></a>题目<a href="https://www.acwing.com/problem/content/description/1243/" target="_blank" rel="noopener">¶</a></h2><blockquote>
+<p>“饱了么”外卖系统中维护着 NN 家外卖店，编号 1∼N1∼N。</p>
+<p>每家外卖店都有一个优先级，初始时 (00 时刻) 优先级都为 00。</p>
+<p>每经过 11 个时间单位，如果外卖店没有订单，则优先级会减少 11，最低减到 00；而如果外卖店有订单，则优先级不减反加，每有一单优先级加 22。</p>
+<p>如果某家外卖店某时刻优先级大于 55，则会被系统加入优先缓存中；如果优先级小于等于 33，则会被清除出优先缓存。</p>
+<p>给定 TT 时刻以内的 MM 条订单信息，请你计算 TT 时刻时有多少外卖店在优先缓存中。</p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含 33 个整数 N,M,TN,M,T。</p>
+<p>以下 MM 行每行包含两个整数 tsts 和 idid，表示 tsts 时刻编号 idid 的外卖店收到一个订单。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出一个整数代表答案。</p>
+<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>1≤N,M,T≤10^5,<br>1≤ts≤T,1≤ts≤T,<br>1≤id≤N,1≤id≤N</p>
+<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><pre><code>2 6 6
+1 1
+5 2
+3 1
+6 2
+2 1
+6 2</code></pre>
+<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><pre><code>1</code></pre>
+<h4 id="样例解释"><a href="#样例解释" class="headerlink" title="样例解释"></a>样例解释</h4><p>6 时刻时，1号店优先级降到 3，被移除出优先缓存；2 号店优先级升到 6，加入优先缓存。</p>
+<p>所以是有 1家店 (2 号) 在优先缓存中。</p>
 </blockquote>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>通过全排列生成所有可能的情况，在排除重复情况时，需要考虑到旋转和翻转，考虑字符串，s’是否为s的旋转等价于s’是否为(s+s)的子串，故通过<code>find</code>判断是否为已有序列的子串，若不是，则加入<code>s+s</code>和<code>(s+s).reverse</code>，每成功加入一次<code>ans++</code>。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于该问题，假设$t_1$、$t_2$、$t_3$时刻有订单，并且$t_1\le t_2 \le t_3 &lt;T$，则需要分别考虑$1\sim t_1-1$ 、$t_1+1 \sim t_2-1$、$t_2+1 \sim t_3-1$、$t_3+1 \sim T$和$t_1$、$t_2$、$t_3$ 、$T$两部分，前一部分是没有订单的部分，需要减去这些时刻*1，后一部分是有订单的部分，需要加上2*订单数（考虑到同一时刻有多个订单）。将订单信息按照时间排序，相同时间按照商店id排序。接着for循环遍历订单，找到相同的订单（时间、商店相同），处理订单时间$t-1-last[id]$，小于0则置零，小于3则设置优先缓存为false，然后处理订单时刻，加上2*订单数，如果优先级大于5，则设置优先缓存为true，最后令<code>last[id]=t</code>。</p>
+<p>如果处理的最后时刻小于T，那么需要减去$T-last[i]$，即处理$last[i]+1 \sim T$部分，若优先级小于等于3，则设置优先缓存为false，最后循环所有优先缓存统计true个数输出即可。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> MAXN <span class="token operator">=</span> <span class="token number">1e5</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> stores<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">,</span> last<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">bool</span> f<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">struct</span> Order
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> t<span class="token punctuation">,</span> id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+vector<span class="token operator">&lt;</span>Order<span class="token operator">></span> orders<span class="token punctuation">;</span>
+
+<span class="token keyword">bool</span> <span class="token function">cmp</span><span class="token punctuation">(</span>Order a<span class="token punctuation">,</span> Order b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>t <span class="token operator">==</span> b<span class="token punctuation">.</span>t<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> a<span class="token punctuation">.</span>id <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">.</span>t <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>t<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    string s <span class="token operator">=</span> <span class="token string">"aaabbbbccccc"</span><span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span>string<span class="token operator">></span> v1<span class="token punctuation">;</span>
-    <span class="token keyword">do</span>
+    <span class="token keyword">int</span> N<span class="token punctuation">,</span> M<span class="token punctuation">,</span> T<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> N <span class="token operator">>></span> M <span class="token operator">>></span> T<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> M<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 排除重复，对于v1中每个元素进行检查，如果存在s的旋转或者翻转，则跳过</span>
-        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> v1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        Order cur<span class="token punctuation">;</span>
+        cin <span class="token operator">>></span> cur<span class="token punctuation">.</span>t <span class="token operator">>></span> cur<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+        orders<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">sort</span><span class="token punctuation">(</span>orders<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> orders<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> M<span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>orders<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>id <span class="token operator">==</span> orders<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>id <span class="token operator">&amp;&amp;</span> orders<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>t <span class="token operator">==</span> orders<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>t <span class="token operator">&amp;&amp;</span> j <span class="token operator">&lt;</span> M<span class="token punctuation">)</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> cnt <span class="token operator">=</span> j <span class="token operator">-</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> id <span class="token operator">=</span> orders<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>id<span class="token punctuation">,</span> t <span class="token operator">=</span> orders<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>t<span class="token punctuation">;</span>
+        i <span class="token operator">=</span> j<span class="token punctuation">;</span>
+
+        stores<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">=</span> t <span class="token operator">-</span> last<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>stores<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            stores<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>stores<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token number">3</span><span class="token punctuation">)</span>
+            f<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        stores<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> cnt <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>stores<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">5</span><span class="token punctuation">)</span>
+            f<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        last<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>last<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> T<span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>v1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">!=</span> string<span class="token operator">::</span>npos<span class="token punctuation">)</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            stores<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">=</span> T <span class="token operator">-</span> last<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>stores<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token number">3</span><span class="token punctuation">)</span>
+                f<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> v1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-            <span class="token keyword">continue</span><span class="token punctuation">;</span>
-        string s2<span class="token operator">=</span>s<span class="token operator">+</span>s<span class="token punctuation">;</span>
-        v1<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 用于判断旋转的情况</span>
-        <span class="token function">reverse</span><span class="token punctuation">(</span>s2<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        v1<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//将s的翻转放入vector</span>
-        ans<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">next_permutation</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            ans<span class="token operator">++</span><span class="token punctuation">;</span>
+
     cout <span class="token operator">&lt;&lt;</span> ans <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.acwing.com/solution/content/5622/" target="_blank" rel="noopener">https://www.acwing.com/solution/content/5622/</a></p>
 
             </div>
             <hr/>
@@ -557,7 +613,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://notplus.cn/2021/04/12/lanqiao-2015p-ca-t7/">http://notplus.cn/2021/04/12/lanqiao-2015p-ca-t7/</a>
+                    <a href="http://notplus.cn/2021/04/15/lanqiao-2019p-ca-tg/">http://notplus.cn/2021/04/15/lanqiao-2019p-ca-tg/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -764,36 +820,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/12/lanqiao-2016p-ca-t8/">
+                <a href="/2021/04/15/lanqiao-2019p-ca-tg/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="蓝桥杯 2018省赛 C/C++ A T4">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="蓝桥杯 2019省赛 C/C++ A TG">
                         
-                        <span class="card-title">蓝桥杯 2018省赛 C/C++ A T4</span>
+                        <span class="card-title">蓝桥杯 2019省赛 C/C++ A TG</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            蓝桥杯 2016省赛 C/C++ A T8知识点暴力枚举优化：
-
-减少枚举范围
-减少枚举变量 （可通过缓存对枚举进行优化）
-
-题目
-四平方和
-四平方和定理，又称为拉格朗日定理：每个正整数都可以表示为至多4个正整数的平方和。如果把0包括进去，
+                            蓝桥杯 2019省赛 C/C++ A TG题目¶
+“饱了么”外卖系统中维护着 NN 家外卖店，编号 1∼N1∼N。
+每家外卖店都有一个优先级，初始时 (00 时刻) 优先级都为 00。
+每经过 11 个时间单位，如果外卖店没有订单，则优先级
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -806,6 +859,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -824,27 +878,28 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/12/lanqiao-2016-ca-t7/">
+                <a href="/2021/04/15/lanqiao-2019p-ca-te/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="蓝桥杯 2016省赛 C/C++ A T7">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="蓝桥杯 2019省赛 C/C++ A TE">
                         
-                        <span class="card-title">蓝桥杯 2016省赛 C/C++ A T7</span>
+                        <span class="card-title">蓝桥杯 2019省赛 C/C++ A TE</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            蓝桥杯 2016省赛 C/C++ A T7知识点全排列+dfs连通块检测
+                            蓝桥杯 2019省赛 C/C++ A TE知识点扩展欧几里得算法/欧拉函数，快速乘与快速幂
 题目
-剪邮票
-如【图1.jpg】, 有12张连在一起的12生肖的邮票。现在你要从中剪下5张来，要求必须是连着的。（仅仅连接一个角不算相连）比如，【图2.jpg】，【图
+
+
+思路本题按照题目所述算法计算，首先需要求得两个质数p、q，直接暴力遍历求得即可，耗时10s左右，之后求e需要通过扩展欧几里得算法或者欧拉函
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
                             </span>
                         <span class="publish-author">
                             
@@ -1000,6 +1055,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 

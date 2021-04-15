@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://notplus.cn/"/>
-  <updated>2021-04-15T01:40:39.908Z</updated>
+  <updated>2021-04-15T12:11:24.544Z</updated>
   <id>http://notplus.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蓝桥杯 2019省赛 C/C++ A TG</title>
+    <link href="http://notplus.cn/2021/04/15/lanqiao-2019p-ca-tg/"/>
+    <id>http://notplus.cn/2021/04/15/lanqiao-2019p-ca-tg/</id>
+    <published>2021-04-15T12:06:32.000Z</published>
+    <updated>2021-04-15T12:11:24.544Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;蓝桥杯-2019省赛-C-C-A-TG&quot;&gt;&lt;a href=&quot;#蓝桥杯-2019省赛-C-C-A-TG&quot; class=&quot;headerlink&quot; title=&quot;蓝桥杯 2019省赛 C/C++ A TG&quot;&gt;&lt;/a&gt;蓝桥杯 2019省赛 C/C++ A
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="http://notplus.cn/categories/Algorithm/"/>
+    
+    
+      <category term="Lanqiao" scheme="http://notplus.cn/tags/Lanqiao/"/>
+    
+  </entry>
   
   <entry>
     <title>蓝桥杯 2019省赛 C/C++ A TE</title>
@@ -538,37 +565,6 @@
     <id>http://notplus.cn/2020/01/09/assignment-1-q3-softmax/</id>
     <published>2020-01-09T01:25:00.000Z</published>
     <updated>2020-08-02T07:08:21.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="CS231 Assignment" scheme="http://notplus.cn/categories/CS231-Assignment/"/>
-    
-    
-      <category term="Deep Learning" scheme="http://notplus.cn/tags/Deep-Learning/"/>
-    
-      <category term="Assignment" scheme="http://notplus.cn/tags/Assignment/"/>
-    
-      <category term="CS231n" scheme="http://notplus.cn/tags/CS231n/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS231 Assignment 1 Q2-SVM</title>
-    <link href="http://notplus.cn/2020/01/08/assignment-1-q2-svm/"/>
-    <id>http://notplus.cn/2020/01/08/assignment-1-q2-svm/</id>
-    <published>2020-01-08T01:25:00.000Z</published>
-    <updated>2020-08-02T08:22:50.000Z</updated>
     
     <summary type="html">
     
