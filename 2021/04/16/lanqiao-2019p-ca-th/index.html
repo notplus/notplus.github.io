@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CS231 Assignment 2 Q3-Dropout, Notplus">
+    <meta name="keywords" content="蓝桥杯 2019省赛 C/C++ A TH, Notplus">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CS231 Assignment 2 Q3-Dropout | Notplus</title>
+    <title>蓝桥杯 2019省赛 C/C++ A TH | Notplus</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -314,7 +314,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CS231 Assignment 2 Q3-Dropout</h1>
+                    <h1 class="description center-align post-title">蓝桥杯 2019省赛 C/C++ A TH</h1>
                 </div>
             </div>
         </div>
@@ -431,16 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Deep-Learning/">
-                                <span class="chip bg-color">Deep Learning</span>
-                            </a>
-                        
-                            <a href="/tags/Assignment/">
-                                <span class="chip bg-color">Assignment</span>
-                            </a>
-                        
-                            <a href="/tags/CS231n/">
-                                <span class="chip bg-color">CS231n</span>
+                            <a href="/tags/Lanqiao/">
+                                <span class="chip bg-color">Lanqiao</span>
                             </a>
                         
                     </div>
@@ -451,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/CS231-Assignment/" class="post-category">
-                                CS231 Assignment
+                            <a href="/categories/Algorithm/" class="post-category">
+                                Algorithm
                             </a>
                         
                     </div>
@@ -464,21 +456,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-15
+                    2021-04-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-02
+                    2021-04-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    523
+                    498
                 </div>
                 
 
@@ -500,107 +492,80 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。<br>所有代码均已上传到GitHub项目<a href="https://github.com/notplus/cs231n-assignment/tree/master/assignment2" target="_blank" rel="noopener">cs231n-assignment2</a></p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="1-dropout-forward"><a href="#1-dropout-forward" class="headerlink" title="1. dropout forward"></a>1. dropout forward</h3><p><strong>实现思路:</strong> 参考论文[1],整体实现还是比较简单，需要注意p为保留的概率</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">dropout_forward</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> dropout_param<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    Performs the forward pass for (inverted) dropout.
+                <h1 id="蓝桥杯-2019省赛-C-C-A-TH"><a href="#蓝桥杯-2019省赛-C-C-A-TH" class="headerlink" title="蓝桥杯 2019省赛 C/C++ A TH"></a>蓝桥杯 2019省赛 C/C++ A TH</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>并查集</p>
+<h2 id="题目¶"><a href="#题目¶" class="headerlink" title="题目¶"></a>题目<a href="https://www.acwing.com/problem/content/description/1244/" target="_blank" rel="noopener">¶</a></h2><blockquote>
+<p>给定一个长度为 NN 的数组 A=[A1,A2,⋅⋅⋅AN]A=[A1,A2,···AN]，数组中有可能有重复出现的整数。</p>
+<p>现在小明要按以下方法将其修改为没有重复整数的数组。</p>
+<p>小明会依次修改 A2,A3,⋅⋅⋅,ANA2,A3,···,AN。</p>
+<p>当修改 AiAi 时，小明会检查 AiAi 是否在 A1∼Ai−1A1∼Ai−1 中出现过。</p>
+<p>如果出现过，则小明会给 AiAi 加上 11；如果新的 AiAi 仍在之前出现过，小明会持续给 AiAi 加 11，直到 AiAi 没有在 A1∼Ai−1A1∼Ai−1 中出现过。</p>
+<p>当 ANAN 也经过上述修改之后，显然 AA 数组中就没有重复的整数了。</p>
+<p>现在给定初始的 AA 数组，请你计算出最终的 AA 数组。</p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含一个整数 NN。</p>
+<p>第二行包含 NN 个整数 A1,A2,⋅⋅⋅,ANA1,A2,···,AN。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出 NN 个整数，依次是最终的 A1,A2,⋅⋅⋅,ANA1,A2,···,AN。</p>
+<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>1≤N≤1051≤N≤105,<br>1≤Ai≤1061≤Ai≤106</p>
+<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><pre><code>5
+2 1 1 3 4</code></pre>
+<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><pre><code>2 1 3 4 5</code></pre>
+</blockquote>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>考虑并查集，由于该A数据范围为1<del>1e6，可以初始化一个1</del>1e6的数组，数组元素为下标，即每棵树的根节点都是自身，处理输入数字，通过递归找到根节点，并修改数组内容+1，即指向后一棵树，</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> MAXN 1000100</span>
+<span class="token keyword">int</span> N<span class="token punctuation">;</span>
+<span class="token keyword">int</span> p<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-    Inputs:
-    - x: Input data, of any shape
-    - dropout_param: A dictionary with the following keys:
-      - p: Dropout parameter. We keep each neuron output with probability p.
-      - mode: 'test' or 'train'. If the mode is train, then perform dropout;
-        if the mode is test, then just return the input.
-      - seed: Seed for the random number generator. Passing seed makes this
-        function deterministic, which is needed for gradient checking but not
-        in real networks.
+<span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">!=</span> x<span class="token punctuation">)</span>
+        p<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>p<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> p<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-    Outputs:
-    - out: Array of the same shape as x.
-    - cache: tuple (dropout_param, mask). In training mode, mask is the dropout
-      mask that was used to multiply the input; in test mode, mask is None.
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>N<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    NOTE: Please implement **inverted** dropout, not the vanilla version of dropout.
-    See http://cs231n.github.io/neural-networks-2/#reg for more details.
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> MAXN<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
 
-    NOTE 2: Keep in mind that p is the probability of **keep** a neuron
-    output; this might be contrary to some sources, where it is referred to
-    as the probability of dropping a neuron output.
-    """</span>
-    p<span class="token punctuation">,</span> mode <span class="token operator">=</span> dropout_param<span class="token punctuation">[</span><span class="token string">'p'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dropout_param<span class="token punctuation">[</span><span class="token string">'mode'</span><span class="token punctuation">]</span>
-    <span class="token keyword">if</span> <span class="token string">'seed'</span> <span class="token keyword">in</span> dropout_param<span class="token punctuation">:</span>
-        np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>seed<span class="token punctuation">(</span>dropout_param<span class="token punctuation">[</span><span class="token string">'seed'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> t<span class="token punctuation">;</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        t <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        p<span class="token punctuation">[</span>t<span class="token punctuation">]</span> <span class="token operator">=</span> t <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    mask <span class="token operator">=</span> None
-    out <span class="token operator">=</span> None
-
-    <span class="token keyword">if</span> mode <span class="token operator">==</span> <span class="token string">'train'</span><span class="token punctuation">:</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true"># TODO: Implement training phase forward pass for inverted dropout.   #</span>
-        <span class="token comment" spellcheck="true"># Store the dropout mask in the mask variable.                        #</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true"># *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-
-        mask <span class="token operator">=</span> <span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token operator">*</span>x<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">&lt;</span> p<span class="token punctuation">)</span> <span class="token operator">/</span> p
-        out <span class="token operator">=</span> mask <span class="token operator">*</span> x
-
-        <span class="token comment" spellcheck="true"># *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true">#                           END OF YOUR CODE                          #</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-    <span class="token keyword">elif</span> mode <span class="token operator">==</span> <span class="token string">'test'</span><span class="token punctuation">:</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true"># TODO: Implement the test phase forward pass for inverted dropout.   #</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true"># *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-
-        out <span class="token operator">=</span> x
-
-        <span class="token comment" spellcheck="true"># *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true">#                            END OF YOUR CODE                         #</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-
-    cache <span class="token operator">=</span> <span class="token punctuation">(</span>dropout_param<span class="token punctuation">,</span> mask<span class="token punctuation">)</span>
-    out <span class="token operator">=</span> out<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>x<span class="token punctuation">.</span>dtype<span class="token punctuation">,</span> copy<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-
-    <span class="token keyword">return</span> out<span class="token punctuation">,</span> cache
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="2-dropout-backward"><a href="#2-dropout-backward" class="headerlink" title="2. dropout backward"></a>2. dropout backward</h3><p><strong>实现思路：</strong> 求导计算梯度，进行反向传播       </p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">dropout_backward</span><span class="token punctuation">(</span>dout<span class="token punctuation">,</span> cache<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    Perform the backward pass for (inverted) dropout.
+<pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">// 错误 超时</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-    Inputs:
-    - dout: Upstream derivatives, of any shape
-    - cache: (dropout_param, mask) from dropout_forward.
-    """</span>
-    dropout_param<span class="token punctuation">,</span> mask <span class="token operator">=</span> cache
-    mode <span class="token operator">=</span> dropout_param<span class="token punctuation">[</span><span class="token string">'mode'</span><span class="token punctuation">]</span>
+<span class="token keyword">int</span> N<span class="token punctuation">;</span>
+set<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> s<span class="token punctuation">;</span>
 
-    dx <span class="token operator">=</span> None
-    <span class="token keyword">if</span> mode <span class="token operator">==</span> <span class="token string">'train'</span><span class="token punctuation">:</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true"># TODO: Implement training phase backward pass for inverted dropout   #</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true"># *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>N<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> t<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token operator">!=</span> s<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            t<span class="token operator">++</span><span class="token punctuation">;</span>
+        s<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-        dx <span class="token operator">=</span> dout <span class="token operator">*</span> mask
-
-        <span class="token comment" spellcheck="true"># *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-        <span class="token comment" spellcheck="true">#                          END OF YOUR CODE                           #</span>
-        <span class="token comment" spellcheck="true">#######################################################################</span>
-    <span class="token keyword">elif</span> mode <span class="token operator">==</span> <span class="token string">'test'</span><span class="token punctuation">:</span>
-        dx <span class="token operator">=</span> dout
-    <span class="token keyword">return</span> dx</code></pre>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本次作业主要是dropout的前向、反向传播实现，较为简单。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li>[1] <a href="https://arxiv.org/abs/1207.0580" target="_blank" rel="noopener">Geoffrey E. Hinton et al, “Improving neural networks by preventing co-adaptation of feature detectors”, arXiv 2012</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/21560667" target="_blank" rel="noopener">CS231n课程笔记翻译：神经网络笔记 2</a></li>
-<li><a href="https://github.com/lightaime/cs231n" target="_blank" rel="noopener">lightaime/cs231n</a></li>
-</ul>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 
             </div>
             <hr/>
@@ -626,7 +591,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://notplus.cn/2020/01/15/assignment-2-q3-dropout/">http://notplus.cn/2020/01/15/assignment-2-q3-dropout/</a>
+                    <a href="http://notplus.cn/2021/04/16/lanqiao-2019p-ca-th/">http://notplus.cn/2021/04/16/lanqiao-2019p-ca-th/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -664,16 +629,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Deep-Learning/">
-                                    <span class="chip bg-color">Deep Learning</span>
-                                </a>
-                            
-                                <a href="/tags/Assignment/">
-                                    <span class="chip bg-color">Assignment</span>
-                                </a>
-                            
-                                <a href="/tags/CS231n/">
-                                    <span class="chip bg-color">CS231n</span>
+                                <a href="/tags/Lanqiao/">
+                                    <span class="chip bg-color">Lanqiao</span>
                                 </a>
                             
                         </div>
@@ -841,55 +798,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/16/assignment-2-q4-convnet/">
+                <a href="/2021/04/16/lanqiao-2019p-ca-th/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CS231 Assignment 2 Q4-ConvNet">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="蓝桥杯 2019省赛 C/C++ A TH">
                         
-                        <span class="card-title">CS231 Assignment 2 Q4-ConvNet</span>
+                        <span class="card-title">蓝桥杯 2019省赛 C/C++ A TH</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment2
-Code1. Convolution: Naive forward实现思路: 通
+                            蓝桥杯 2019省赛 C/C++ A TH知识点并查集
+题目¶
+给定一个长度为 NN 的数组 A=[A1,A2,⋅⋅⋅AN]A=[A1,A2,···AN]，数组中有可能有重复出现的整数。
+现在小明要按以下方法将其修改为没有重复整数的数组。
+
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                            <a href="/categories/Algorithm/" class="post-category">
+                                    Algorithm
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Deep-Learning/">
-                        <span class="chip bg-color">Deep Learning</span>
-                    </a>
-                    
-                    <a href="/tags/Assignment/">
-                        <span class="chip bg-color">Assignment</span>
-                    </a>
-                    
-                    <a href="/tags/CS231n/">
-                        <span class="chip bg-color">CS231n</span>
+                    <a href="/tags/Lanqiao/">
+                        <span class="chip bg-color">Lanqiao</span>
                     </a>
                     
                 </div>
@@ -903,32 +857,34 @@ Code1. Convolution: Naive forward实现思路: 通
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/14/assignment-2-q2-batchnormalization/">
+                <a href="/2021/04/16/lanqiao-2018p-cb-t6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="CS231 Assignment 2 Q2-BatchNormalization">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="蓝桥杯 2018省赛 C/C++ B T6">
                         
-                        <span class="card-title">CS231 Assignment 2 Q2-BatchNormalization</span>
+                        <span class="card-title">蓝桥杯 2018省赛 C/C++ B T6</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Introduction本文为斯坦福大学CS231n课程作业及总结，若有错误，欢迎指正。所有代码均已上传到GitHub项目cs231n-assignment2
-Code1. batch normalization forward实现思路: 
+                            蓝桥杯 2018省赛 C/C++ A T6知识点二分
+题目
+标题：递增三元组
+给定三个整数数组A = [A1, A2, … AN],B = [B1, B2, … BN],C = [C1, C2, … CN]，请你统计有多少个三元组(i, j
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CS231-Assignment/" class="post-category">
-                                    CS231 Assignment
+                            <a href="/categories/Algorithm/" class="post-category">
+                                    Algorithm
                                 </a>
                             
                             
@@ -938,16 +894,8 @@ Code1. batch normalization forward实现思路:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Deep-Learning/">
-                        <span class="chip bg-color">Deep Learning</span>
-                    </a>
-                    
-                    <a href="/tags/Assignment/">
-                        <span class="chip bg-color">Assignment</span>
-                    </a>
-                    
-                    <a href="/tags/CS231n/">
-                        <span class="chip bg-color">CS231n</span>
+                    <a href="/tags/Lanqiao/">
+                        <span class="chip bg-color">Lanqiao</span>
                     </a>
                     
                 </div>

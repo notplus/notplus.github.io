@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://notplus.cn/"/>
-  <updated>2021-04-15T12:11:24.544Z</updated>
+  <updated>2021-04-16T10:00:26.053Z</updated>
   <id>http://notplus.cn/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蓝桥杯 2019省赛 C/C++ A TH</title>
+    <link href="http://notplus.cn/2021/04/16/lanqiao-2019p-ca-th/"/>
+    <id>http://notplus.cn/2021/04/16/lanqiao-2019p-ca-th/</id>
+    <published>2021-04-16T09:36:32.000Z</published>
+    <updated>2021-04-16T10:00:26.053Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;蓝桥杯-2019省赛-C-C-A-TH&quot;&gt;&lt;a href=&quot;#蓝桥杯-2019省赛-C-C-A-TH&quot; class=&quot;headerlink&quot; title=&quot;蓝桥杯 2019省赛 C/C++ A TH&quot;&gt;&lt;/a&gt;蓝桥杯 2019省赛 C/C++ A
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="http://notplus.cn/categories/Algorithm/"/>
+    
+    
+      <category term="Lanqiao" scheme="http://notplus.cn/tags/Lanqiao/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>蓝桥杯 2018省赛 C/C++ B T6</title>
+    <link href="http://notplus.cn/2021/04/16/lanqiao-2018p-cb-t6/"/>
+    <id>http://notplus.cn/2021/04/16/lanqiao-2018p-cb-t6/</id>
+    <published>2021-04-16T08:36:32.000Z</published>
+    <updated>2021-04-16T09:59:34.561Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;蓝桥杯-2018省赛-C-C-A-T6&quot;&gt;&lt;a href=&quot;#蓝桥杯-2018省赛-C-C-A-T6&quot; class=&quot;headerlink&quot; title=&quot;蓝桥杯 2018省赛 C/C++ A T6&quot;&gt;&lt;/a&gt;蓝桥杯 2018省赛 C/C++ A
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="http://notplus.cn/categories/Algorithm/"/>
+    
+    
+      <category term="Lanqiao" scheme="http://notplus.cn/tags/Lanqiao/"/>
+    
+  </entry>
   
   <entry>
     <title>蓝桥杯 2019省赛 C/C++ A TG</title>
@@ -503,68 +557,6 @@
     <id>http://notplus.cn/2020/01/12/assignment-1-q5-feat/</id>
     <published>2020-01-12T01:25:00.000Z</published>
     <updated>2020-08-02T07:08:14.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="CS231 Assignment" scheme="http://notplus.cn/categories/CS231-Assignment/"/>
-    
-    
-      <category term="Deep Learning" scheme="http://notplus.cn/tags/Deep-Learning/"/>
-    
-      <category term="Assignment" scheme="http://notplus.cn/tags/Assignment/"/>
-    
-      <category term="CS231n" scheme="http://notplus.cn/tags/CS231n/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS231 Assignment 1 Q4-NN</title>
-    <link href="http://notplus.cn/2020/01/11/assignment-1-q4-nn/"/>
-    <id>http://notplus.cn/2020/01/11/assignment-1-q4-nn/</id>
-    <published>2020-01-11T01:25:00.000Z</published>
-    <updated>2020-08-02T07:08:17.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="CS231 Assignment" scheme="http://notplus.cn/categories/CS231-Assignment/"/>
-    
-    
-      <category term="Deep Learning" scheme="http://notplus.cn/tags/Deep-Learning/"/>
-    
-      <category term="Assignment" scheme="http://notplus.cn/tags/Assignment/"/>
-    
-      <category term="CS231n" scheme="http://notplus.cn/tags/CS231n/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS231 Assignment 1 Q3-Softmax</title>
-    <link href="http://notplus.cn/2020/01/09/assignment-1-q3-softmax/"/>
-    <id>http://notplus.cn/2020/01/09/assignment-1-q3-softmax/</id>
-    <published>2020-01-09T01:25:00.000Z</published>
-    <updated>2020-08-02T07:08:21.000Z</updated>
     
     <summary type="html">
     
